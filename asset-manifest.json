@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/LucioPalmucci/Movies-reviews/static/css/main.d9d4f267.css",
-    "main.js": "/LucioPalmucci/Movies-reviews/static/js/main.bf0e7232.js",
-    "static/js/488.b552d8a8.chunk.js": "/LucioPalmucci/Movies-reviews/static/js/488.b552d8a8.chunk.js",
-    "index.html": "/LucioPalmucci/Movies-reviews/index.html",
-    "main.d9d4f267.css.map": "/LucioPalmucci/Movies-reviews/static/css/main.d9d4f267.css.map",
-    "main.bf0e7232.js.map": "/LucioPalmucci/Movies-reviews/static/js/main.bf0e7232.js.map",
-    "488.b552d8a8.chunk.js.map": "/LucioPalmucci/Movies-reviews/static/js/488.b552d8a8.chunk.js.map"
+    "main.css": "/Movies-review/static/css/main.d9d4f267.css",
+    "main.js": "/Movies-review/static/js/main.53432af5.js",
+    "static/js/488.b552d8a8.chunk.js": "/Movies-review/static/js/488.b552d8a8.chunk.js",
+    "index.html": "/Movies-review/index.html",
+    "main.d9d4f267.css.map": "/Movies-review/static/css/main.d9d4f267.css.map",
+    "main.53432af5.js.map": "/Movies-review/static/js/main.53432af5.js.map",
+    "488.b552d8a8.chunk.js.map": "/Movies-review/static/js/488.b552d8a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9d4f267.css",
-    "static/js/main.bf0e7232.js"
+    "static/js/main.53432af5.js"
   ]
 }
