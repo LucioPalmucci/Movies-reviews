@@ -5,7 +5,7 @@ export default function Header() {
     const [showDropdown, setShowDropdown] = useState(false);
 
     return (
-        <nav className="bg-gray-800 flex justify-between text-white font-lato p-4">
+        <nav className="bg-gray-800 flex justify-between text-white font-Lato p-4">
             <ul className="flex space-x-12 bg-gray-800 items-center">
                 <li>Home</li>
                 <li>Reviews</li>
