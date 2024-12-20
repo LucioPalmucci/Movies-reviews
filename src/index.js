@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Body from './Components/Body';
 import Header from './Components/Header';
+import MovieSlider from './Components/MovieSlider';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header/>
-    <Body/>
+    <Header />
+    <MovieSlider API_URL={"https://api.themoviedb.org/3/movie/now_playing"} title={"Latest Movies"}/>
+    <MovieSlider API_URL={"https://api.themoviedb.org/3/movie/top_rated"} title={"Best Movies"}/>
   </React.StrictMode>
 );
 
