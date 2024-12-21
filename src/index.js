@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './Components/Header';
-import MovieSlider from './Components/MovieSlider';
+import MovieSliders from './Components/MovieSliders';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -9,8 +9,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
-    <MovieSlider API_URL={"https://api.themoviedb.org/3/movie/now_playing"} title={"Latest Movies"}/>
-    <MovieSlider API_URL={"https://api.themoviedb.org/3/movie/top_rated"} title={"Best Movies"}/>
+    <MovieSliders API_URL={"https://api.themoviedb.org/3/movie/now_playing"}/>
+    <MovieSliders API_URL={"https://api.themoviedb.org/3/movie/upcoming"}/>
+    <MovieSliders API_URL={"https://api.themoviedb.org/3/movie/top_rated"}/>
   </React.StrictMode>
 );
 
