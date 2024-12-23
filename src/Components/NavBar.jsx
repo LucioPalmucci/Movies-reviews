@@ -1,7 +1,7 @@
 import { faGlobe, faMagnifyingGlass, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-export default function Header() {
+export default function NavBar() {
     const [showDropdown, setShowDropdown] = useState(false);
 
     return (

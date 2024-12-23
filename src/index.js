@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Header from './Components/Header';
+import Footer from './Components/Footer';
 import MovieSliders from './Components/MovieSliders';
+import NavBar from './Components/NavBar';
+import People from './Components/People';
 import TVshows from './Components/TVshows';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -9,11 +11,13 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header />
+    <NavBar />
     <MovieSliders API_URL={"https://api.themoviedb.org/3/movie/now_playing"}/>
     <MovieSliders API_URL={"https://api.themoviedb.org/3/movie/upcoming"}/>
     <MovieSliders API_URL={"https://api.themoviedb.org/3/movie/top_rated"}/>
     <TVshows/>
+    <People/>
+    <Footer/>
   </React.StrictMode>
 );
 

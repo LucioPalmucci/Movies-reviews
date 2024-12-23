@@ -7,7 +7,7 @@ import "./MovieSliders.css";
 export function Latest({ movieChunks }) {
     return (
         <div className="p-4 font-Lato rounded bg-gray-100 pt-2 mt-10">
-            <h1 className="text-2xl font-bold mb-1">Lastest Realeses</h1>
+            <h1 className="text-2xl font-bold mb-2 ">Lastest Realeses</h1>
             <Carousel className='w-full justify-center flex carousel'>
                 {movieChunks.map((chunk, index) => (
                     <Carousel.Item key={index}>
@@ -35,7 +35,7 @@ export function Latest({ movieChunks }) {
 export function Upcoming({ movieChunks }) {
     return (
         <div className="p-4 font-Lato rounded bg-gray-100 pt-2 mt-20">
-            <h1 className="text-2xl font-bold mb-1">Upcoming in theathers</h1>
+            <h1 className="text-2xl font-bold mb-2">Upcoming in theathers</h1>
             <Carousel className='w-full justify-center flex carousel'>
                 {movieChunks.map((chunk, index) => (
                     <Carousel.Item key={index}>
@@ -50,7 +50,7 @@ export function Upcoming({ movieChunks }) {
                                             style={{ width: '250px', height: '300px' }}
                                         />
                                     </a>
-                                    <FontAwesomeIcon icon={faCalendar}/> {movie.release_date}
+                                    <FontAwesomeIcon icon={faCalendar} className='text-emerald-300'/> {movie.release_date}
                                 </div>
                             ))}
                         </div>
@@ -64,7 +64,7 @@ export function Upcoming({ movieChunks }) {
 export function Best({ movieChunks }) {
     return (
         <div className="p-4 font-Lato rounded bg-yellow-100 pt-2 mt-20 yellow-glow">
-            <h1 className="text-2xl font-bold mb-1">Top Movies</h1>
+            <h1 className="text-2xl font-bold mb-2">Top Movies</h1>
             <Carousel className='w-full justify-center flex carousel'>
                 {movieChunks.map((chunk, index) => (
                     <Carousel.Item key={index}>

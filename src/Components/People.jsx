@@ -39,7 +39,7 @@ export default function People() {
     }
 
     return (
-        <div className='p-4 font-Lato mt-20'>
+        <div className='p-4 font-Lato mt-16'>
             <h1 className='text-2xl font-bold'>Trending celebrities</h1>
             <Carousel className='mt-8'>
                 {peopleChunks.map((chunk, index) => (
