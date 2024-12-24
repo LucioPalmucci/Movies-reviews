@@ -81,17 +81,18 @@ export default function TVshows() {
             <h1 className='text-2xl font-bold'>TV Shows</h1>
             <div className='flex justify-between space-x-16'>
                 <div className='text-start p-4 font-Lato rounded bg-gray-100 pt-2 mt-10 w-1/2'>
-                    <h3 className='text-xl py-2'>Airing today</h3>
+                    <h3 className='text-xl py-2 mb-2'>Airing today</h3>
                     {airingTodayShows.map((show) => {
                         const { icon, colorRating } = getSmileIcon(show.vote_average);
                         const { colorPopularity } = getFireColor(show.popularity);
                         return (
                             <div key={show.id}>
-                                <div className="p-2">
+                                <div className="p-2 py-0">
                                     <a
                                         href={`https://www.themoviedb.org/tv/${show.id}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        className='no-decoration'
                                     >
                                         <div className='justify-between flex'>
                                             <p>{show.name}</p>
@@ -108,17 +109,18 @@ export default function TVshows() {
                     })}
                 </div>
                 <div className='text-start p-4 font-Lato rounded bg-gray-100 pt-2 mt-10 w-1/2'>
-                    <h3 className='text-xl py-2'>Top rated</h3>
+                    <h3 className='text-xl py-2 mb-2'>Top rated</h3>
                     {topRatedShows.map((show, index) => {
                         const { icon, colorRating } = getRankingIcon(show.vote_average, index);
                         const { colorPopularity } = getFireColor(show.popularity);
                         return (
                             <div key={show.id}>
-                                <div className="p-2">
+                                <div className="p-2 py-0">
                                     <a
                                         href={`https://www.themoviedb.org/tv/${show.id}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        className='no-decoration'
                                     >
                                         <div className='justify-between flex'>
                                             <p>{show.name}</p>

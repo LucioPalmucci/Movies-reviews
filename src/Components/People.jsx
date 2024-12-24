@@ -4,6 +4,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import "./MovieSliders.css";
 
 const API_KEY = 'e64b602aba57474ef266dbb22be5f8db';
 const API_URL = 'https://api.themoviedb.org/3/person/popular';
@@ -51,13 +52,14 @@ export default function People() {
                                         href={`https://www.themoviedb.org/person/${person.id}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        className='no-decoration'
                                     >
                                         <img
                                             className='rounded-full mb-2 hover:opacity-75 transition ease-in-out duration-150 w-48 h-48 object-cover'
                                             src={`https://image.tmdb.org/t/p/w200${person.profile_path}`}
                                             alt={person.name}
                                         />
-                                        <h2 className='text-xl font-bold'>{person.name}</h2>
+                                        <h2 className='text-xl font-bold person'>{person.name}</h2>
                                         <p className='text-gray-600'>Popularity: <FontAwesomeIcon icon={faArrowTrendUp} className='text-green-400'/>{person.popularity.toFixed(0)}</p>
                                     </a>
                                 </div>

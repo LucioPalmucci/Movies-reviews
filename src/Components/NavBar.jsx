@@ -9,8 +9,8 @@ export default function NavBar() {
         <nav className="bg-orange-500 flex justify-between text-white font-Lato p-4">
             <ul className="flex space-x-12 items-center">
                 <li><Link to="/" className="no-decoration">Home</Link></li>
-                <li><Link to="/reviews" className="no-decoration">reviews</Link></li>
-                <li><Link to="/about" className="no-decoration">About Movie-reviews</Link></li>
+                <li><Link to="/reviews" className="no-decoration">Reviews</Link></li>
+                <li><Link to="/about" className="no-decoration">About Movie-Reviews</Link></li>
                 <li><Link to="/contact" className="no-decoration">Contact</Link></li>
             </ul>
             <form className="flex items-center">
