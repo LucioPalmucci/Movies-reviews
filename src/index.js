@@ -1,14 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Footer from './Components/Footer';
-import MovieSliders from './Components/MovieSliders';
-import NavBar from './Components/NavBar';
-import People from './Components/People';
-import TVshows from './Components/TVshows';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import App from './App';
 import './index.css';
-import reportWebVitals from './reportWebVitals';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
+import Home from './Pages/Home';
+import Reviews from './Pages/Reviews';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <Router basename="/Movies-reviews">
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />} />
+          <Route path="reviews" element={<Reviews />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </Router>
+  </React.StrictMode>
+);
+
+/*const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <NavBar />
@@ -24,4 +40,4 @@ root.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals();*/

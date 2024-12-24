@@ -1,16 +1,17 @@
 import { faGlobe, faMagnifyingGlass, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 export default function NavBar() {
     const [showDropdown, setShowDropdown] = useState(false);
 
     return (
         <nav className="bg-orange-500 flex justify-between text-white font-Lato p-4">
             <ul className="flex space-x-12 items-center">
-                <li>Home</li>
-                <li>Reviews</li>
-                <li>About Movie-Reviews</li>
-                <li>Contact</li>
+                <li><Link to="/" className="no-decoration">Home</Link></li>
+                <li><Link to="/reviews" className="no-decoration">reviews</Link></li>
+                <li><Link to="/about" className="no-decoration">About Movie-reviews</Link></li>
+                <li><Link to="/contact" className="no-decoration">Contact</Link></li>
             </ul>
             <form className="flex items-center">
                 <input type="search" id="menu" placeholder="Search..." className="rounded mr-2 text-black" />

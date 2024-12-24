@@ -5,7 +5,10 @@ body{
     width: 85%;
     justify-self: center;
 }
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
