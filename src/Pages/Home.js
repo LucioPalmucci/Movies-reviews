@@ -1,6 +1,6 @@
-import MovieSliders from "../Components/MovieSliders"
-import People from "../Components/People"
-import TVshows from "../Components/TVshows"
+import MovieSliders from "../Components/Home/MovieSliders.jsx"
+import People from "../Components/Home/People.jsx"
+import TVshows from "../Components/Home/TVshows.jsx"
 
 export default function Home() {
     return (

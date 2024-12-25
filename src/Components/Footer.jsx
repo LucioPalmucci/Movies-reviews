@@ -1,7 +1,7 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import "./MovieSliders.css";
+import "./Home/MovieSliders.css";
 
 export default function Footer() {
     return (
