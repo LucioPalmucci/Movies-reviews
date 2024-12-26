@@ -95,7 +95,7 @@ export default function TVshows() {
                                         className='no-decoration'
                                     >
                                         <div className='justify-between flex'>
-                                            <p>{show.name}</p>
+                                            <p className='mb-0'>{show.name}</p>
                                             <div className={`space-x-4`}>
                                                 <span className={colorPopularity}><FontAwesomeIcon icon={faFire} /> {show.popularity.toFixed(0)}</span>
                                                 <span className={colorRating}><FontAwesomeIcon icon={icon} /> {show.vote_average.toFixed(1)}</span>
@@ -123,7 +123,7 @@ export default function TVshows() {
                                         className='no-decoration'
                                     >
                                         <div className='justify-between flex'>
-                                            <p>{show.name}</p>
+                                            <p className='mb-0'>{show.name}</p>
                                             <div className="space-x-4">
                                                 <span className={colorPopularity}><FontAwesomeIcon icon={faFire} /> {show.popularity.toFixed(0)}</span>
                                                 <span className={colorRating}><FontAwesomeIcon icon={icon} /> {show.vote_average.toFixed(1)}</span>

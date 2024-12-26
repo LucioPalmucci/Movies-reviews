@@ -7,7 +7,7 @@ export default function NavBar() {
 
     return (
         <nav className="bg-orange-500 flex justify-between text-white font-Lato p-4">
-            <ul className="flex space-x-12 items-center">
+            <ul className="flex space-x-12 items-center mb-0">
                 <li><Link to="/" className="no-decoration">Home</Link></li>
                 <li><Link to="/reviews" className="no-decoration">Reviews</Link></li>
                 <li><Link to="/about" className="no-decoration">About Movie-Reviews</Link></li>
