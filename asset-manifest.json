@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Movies-reviews/static/css/main.2cf992a8.css",
-    "main.js": "/Movies-reviews/static/js/main.144b0828.js",
+    "main.js": "/Movies-reviews/static/js/main.f7869a43.js",
     "index.html": "/Movies-reviews/index.html",
     "main.2cf992a8.css.map": "/Movies-reviews/static/css/main.2cf992a8.css.map",
-    "main.144b0828.js.map": "/Movies-reviews/static/js/main.144b0828.js.map"
+    "main.f7869a43.js.map": "/Movies-reviews/static/js/main.f7869a43.js.map"
   },
   "entrypoints": [
     "static/css/main.2cf992a8.css",
-    "static/js/main.144b0828.js"
+    "static/js/main.f7869a43.js"
   ]
 }
