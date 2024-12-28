@@ -11,9 +11,9 @@ import Reviews from './Pages/Reviews';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/Movies-reviews">
       <Routes>
-        <Route path="/" element={<App />}>
+        <Route path="/" element={<App />} >
           <Route index element={<Home />} />
           <Route path="reviews" element={<Reviews />} />
           <Route path="about" element={<About />} />
