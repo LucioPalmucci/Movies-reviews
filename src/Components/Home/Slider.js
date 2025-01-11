@@ -2,6 +2,7 @@ import { faCalendar, faCheckToSlot, faPlay, faStar } from '@fortawesome/free-sol
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import "./MovieSliders.css";
 
 export function Latest({ movieChunks }) {
@@ -71,14 +72,14 @@ export function Best({ movieChunks }) {
                         <div className="d-flex justify-content-around" style={{ minHeight: '300px' }}>
                             {chunk.map((movie) => (
                                 <div key={movie.id} className="p-2 relative" style={{ width: '200px' }}>
-                                    <a href={`https://www.youtube.com/results?search_query=${movie.title} trailer`} target="_blank" rel="noopener noreferrer">
+                                    <Link to={`/movie/${movie.id}`} target='_blank' rel='noopener noreferrer'>
                                         <img
                                             className="d-block hover:opacity-75 transition ease-in-out duration-150 mb-1"
                                             src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                                             alt={movie.title}
                                             style={{ width: '250px', height: '300px' }}
                                         />
-                                    </a>
+                                    </Link>
                                     <div className='justify-between flex left-0'>
                                         <div>
                                             <FontAwesomeIcon icon={faStar} color='rgb(222, 218, 0)' />{movie.vote_average.toFixed(1)}

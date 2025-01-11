@@ -6,6 +6,7 @@ import './index.css';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Home from './Pages/Home';
+import MovieDetails from './Pages/MovieDetails';
 import Reviews from './Pages/Reviews';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +19,7 @@ root.render(
           <Route path="reviews" element={<Reviews />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="movie/:id" element={<MovieDetails />} />
         </Route>
       </Routes>
     </Router>
