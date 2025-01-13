@@ -1,9 +1,16 @@
 import { faGlobe, faMagnifyingGlass, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export default function NavBar() {
     const [showDropdown, setShowDropdown] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
+    const navigate = useNavigate();
+
+    const handleSearchSubmit = (e) => {
+        e.preventDefault();
+        navigate(`/search?query=${searchQuery}`);
+    };
 
     return (
         <nav className="bg-orange-500 flex justify-between text-white font-Lato p-4">
@@ -13,8 +20,15 @@ export default function NavBar() {
                 <li><Link to="/about" className="no-decoration">About Movie-Reviews</Link></li>
                 <li><Link to="/contact" className="no-decoration">Contact</Link></li>
             </ul>
-            <form className="flex items-center">
-                <input type="search" id="menu" placeholder="Search..." className="rounded mr-2 text-black" />
+            <form className="flex items-center" onSubmit={handleSearchSubmit}>
+                <input
+                    type="search"
+                    id="menu"
+                    placeholder="Search..."
+                    className="rounded mr-2 text-black"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                />
                 <button type="submit" className="p-1 rounded-lg">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>

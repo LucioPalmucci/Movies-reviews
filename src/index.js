@@ -8,6 +8,7 @@ import Contact from './Pages/Contact';
 import Home from './Pages/Home';
 import MovieDetails from './Pages/MovieDetails';
 import Reviews from './Pages/Reviews';
+import SearchResults from './Pages/SearchResults';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="movie/:id" element={<MovieDetails />} />
+          <Route path='search' element={<SearchResults />} />
         </Route>
       </Routes>
     </Router>
