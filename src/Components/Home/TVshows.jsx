@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./MovieSliders.css";
 
 const API_KEY = 'e64b602aba57474ef266dbb22be5f8db';
@@ -88,8 +89,8 @@ export default function TVshows() {
                         return (
                             <div key={show.id}>
                                 <div className="p-2 py-0">
-                                    <a
-                                        href={`https://www.themoviedb.org/tv/${show.id}`}
+                                    <Link
+                                        to={`/tvshow/${show.id}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className='no-decoration'
@@ -101,7 +102,7 @@ export default function TVshows() {
                                                 <span className={colorRating}><FontAwesomeIcon icon={icon} /> {show.vote_average.toFixed(1)}</span>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <hr />
                             </div>
@@ -116,8 +117,8 @@ export default function TVshows() {
                         return (
                             <div key={show.id}>
                                 <div className="p-2 py-0">
-                                    <a
-                                        href={`https://www.themoviedb.org/tv/${show.id}`}
+                                    <Link
+                                        to={`/tvshow/${show.id}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className='no-decoration'
@@ -129,7 +130,7 @@ export default function TVshows() {
                                                 <span className={colorRating}><FontAwesomeIcon icon={icon} /> {show.vote_average.toFixed(1)}</span>
                                             </div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <hr />
                             </div>

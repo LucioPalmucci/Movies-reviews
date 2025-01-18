@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
 export default function MovieDetails() {
     const { id } = useParams();
     const [movie, setMovie] = useState(null);

@@ -5,8 +5,9 @@ import App from './App';
 import './index.css';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import MovieDetails from './Pages/Details/MovieDetails';
+import TVShowDetails from './Pages/Details/TVshowDetails';
 import Home from './Pages/Home';
-import MovieDetails from './Pages/MovieDetails';
 import Reviews from './Pages/Reviews';
 import SearchResults from './Pages/SearchResults';
 
@@ -21,6 +22,7 @@ root.render(
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="movie/:id" element={<MovieDetails />} />
+          <Route path="tvshow/:id" element={<TVShowDetails />} />
           <Route path='search' element={<SearchResults />} />
         </Route>
       </Routes>
