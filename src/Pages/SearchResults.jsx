@@ -61,7 +61,7 @@ function MovieCard({ movie }) {
     const overviewText = isExpanded ? movie.overview : `${movie.overview.substring(0, 200)}...`;
 
     return (
-        <div className="bg-gray-600 text-white p-4 rounded w-64">
+        <div className="bg-gray-600 text-white p-4 rounded w-64 font-Rubik">
             <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} className="w-full h-auto mb-2 rounded" />
             <h2 className="text-lg font-bold">{movie.title}</h2>
             <p className="text-sm">{movie.release_date}</p>

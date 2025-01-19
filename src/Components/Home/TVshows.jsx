@@ -78,7 +78,7 @@ export default function TVshows() {
     }
 
     return (
-        <div className='p-4 font-Lato mt-20'>
+        <div className='p-4 font-Rubik mt-20'>
             <h1 className='text-2xl font-bold'>TV Shows</h1>
             <div className='flex justify-between space-x-16'>
                 <div className='text-start p-4 font-Lato rounded bg-gray-100 pt-2 mt-10 w-1/2'>

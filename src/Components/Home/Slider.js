@@ -7,7 +7,7 @@ import "./MovieSliders.css";
 
 export function Latest({ movieChunks }) {
     return (
-        <div className="p-4 font-Lato bg-gray-100 pt-2 mt-10">
+        <div className="p-4 font-Rubik bg-gray-100 pt-2 mt-10">
             <h1 className="text-2xl font-bold mb-2 ">Lastest Realeses</h1>
             <Carousel className='w-full justify-center flex carousel'>
                 {movieChunks.map((chunk, index) => (
@@ -35,7 +35,7 @@ export function Latest({ movieChunks }) {
 }
 export function Upcoming({ movieChunks }) {
     return (
-        <div className="p-4 font-Lato bg-gray-100 pt-2 mt-20">
+        <div className="p-4 font-Rubik bg-gray-100 pt-2 mt-20">
             <h1 className="text-2xl font-bold mb-2">Upcoming in theathers</h1>
             <Carousel className='w-full justify-center flex carousel'>
                 {movieChunks.map((chunk, index) => (
@@ -64,7 +64,7 @@ export function Upcoming({ movieChunks }) {
 
 export function Best({ movieChunks }) {
     return (
-        <div className="p-4 font-Lato bg-yellow-100 pt-2 mt-20 yellow-glow">
+        <div className="p-4 font-Rubik bg-yellow-100 pt-2 mt-20 yellow-glow">
             <h1 className="text-2xl font-bold mb-2">Top Movies</h1>
             <Carousel className='w-full justify-center flex carousel'>
                 {movieChunks.map((chunk, index) => (

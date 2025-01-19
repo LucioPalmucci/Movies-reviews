@@ -30,7 +30,7 @@ export default function MovieDetails() {
     }
 
     return (
-        <div className='m-4 px-44 flex justify-evenly mt-10 space-x-10 items-center '>
+        <div className='m-4 px-44 flex font-Rubik justify-evenly mt-10 space-x-10 items-center '>
             <div>
                 <h1 className="text-2xl font-bold mb-2 py-2">{movie.title}</h1>
                 <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />

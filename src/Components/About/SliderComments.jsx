@@ -22,7 +22,7 @@ export default function SliderComments() {
     }
 
     return (
-        <div className='p-4 font-Lato mt-16'>
+        <div className='p-4 font-Rubik mt-16'>
             <h1>Comments</h1>
             <Carousel className='my-6'>
                 {comChunks.map((commentGroup, index) => {
