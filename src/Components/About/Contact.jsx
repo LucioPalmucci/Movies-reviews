@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Contact () {
     return (
-        <div className="flex justify-evenly mt-16 bg-gray-100 rounded py-10 px-4">
+        <div className="flex justify-evenly mt-16 bg-gray-100 rounded py-10 px-4 dark:bg-neutral-600">
             <div className="social-media">
                 <h4>Contact Us</h4>
                 <div className="space-x-2">

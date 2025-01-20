@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import Comment from './Comment';
+import "./slider.css";
 
 export default function SliderComments() {
     const comments = [

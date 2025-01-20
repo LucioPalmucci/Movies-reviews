@@ -43,12 +43,12 @@ export default function TVShowDetails() {
     }
 
     return (
-        <div className='m-4 px-44 flex font-Rubik justify-evenly mt-10 space-x-10 items-center'>
+        <div className='m-4 px-44 flex font-Rubik justify-evenly mt-10 space-x-10 items-center dark:bg-neutral-900'>
             <div>
                 <h1 className="text-2xl font-bold mb-2 py-2">{show.name}</h1>
                 <img src={`https://image.tmdb.org/t/p/w500${show.poster_path}`} alt={show.name} />
             </div>
-            <div className='p-10 rounded bg-gray-200 m-10 align-center flex flex-col h-full'>
+            <div className='p-10 rounded bg-gray-200 m-10 align-center flex flex-col h-full dark:bg-neutral-700'>
                 <p><b>Plot:</b> {show.overview}</p>
                 <p><b>First Air Date:</b> {show.first_air_date}</p>
                 <p><b>Genres:</b> {show.genres.map(genre => genre.name).join(', ')}</p>

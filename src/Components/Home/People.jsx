@@ -60,7 +60,7 @@ export default function People() {
                                             alt={person.name}
                                         />
                                         <h2 className='text-xl font-bold person mb-0'>{person.name}</h2>
-                                        <p className='text-gray-600'>Popularity: <FontAwesomeIcon icon={faArrowTrendUp} className='text-green-400'/>{person.popularity.toFixed(0)}</p>
+                                        <p className='text-gray-600 dark:text-white'>Popularity: <FontAwesomeIcon icon={faArrowTrendUp} className='text-green-400'/>{person.popularity.toFixed(0)}</p>
                                     </a>
                                 </div>
                             ))}

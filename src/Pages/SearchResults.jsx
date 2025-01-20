@@ -44,6 +44,7 @@ export default function SearchResults() {
     return (
         <div className="p-4">
             <h1 className="text-2xl font-bold">Search Results for "{query}"</h1>
+            <br/>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {movies.map(movie => (
                     <MovieCard key={movie.id} movie={movie} />
@@ -61,11 +62,11 @@ function MovieCard({ movie }) {
     const overviewText = isExpanded ? movie.overview : `${movie.overview.substring(0, 200)}...`;
 
     return (
-        <div className="bg-gray-600 text-white p-4 rounded w-64 font-Rubik">
+        <div className="bg-gray-600 text-white p-4 rounded w-64 font-Rubik dark:bg-neutral-400 ">
             <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} className="w-full h-auto mb-2 rounded" />
-            <h2 className="text-lg font-bold">{movie.title}</h2>
-            <p className="text-sm">{movie.release_date}</p>
-            <p className="text-sm mb-0">{overviewText}</p>
+            <h2 className="text-lg font-bold dark:text-black">{movie.title}</h2>
+            <p className="text-sm dark:text-black">{movie.release_date}</p>
+            <p className="text-sm mb-0 dark:text-black">{overviewText}</p>
             {movie.overview.length > 200 && (
                 <button onClick={toggleExpand} className="text-blue-500 text-sm">
                     {isExpanded ? 'Read Less' : 'Read More'}
