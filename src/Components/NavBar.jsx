@@ -2,6 +2,7 @@ import { faGlobe, faMagnifyingGlass, faMoon } from "@fortawesome/free-solid-svg-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
 export default function NavBar({ toggleDarkMode, isDarkMode }) {
     const [showDropdown, setShowDropdown] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
@@ -45,12 +46,10 @@ export default function NavBar({ toggleDarkMode, isDarkMode }) {
                         </ul>
                     )}
                 </div>
-                <button className="items-center rounded-full bg-gray-100 text-black text-lg p-2 px-3 dark:bg-neutral-700 " onClick={toggleDarkMode}>
+                <button className="items-center rounded-full bg-gray-100 text-black text-lg p-2 px-3 dark:bg-neutral-700" onClick={toggleDarkMode}>
                     <FontAwesomeIcon icon={faMoon} className="dark:text-white"/>
                 </button>
             </div>
         </nav>
-    )
+    );
 }
-
-
