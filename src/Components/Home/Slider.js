@@ -5,10 +5,10 @@ import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import "./MovieSliders.css";
 
-export function Latest({ movieChunks }) {
+export function Latest({ movieChunks , title }) {
     return (
         <div className="p-4 font-Rubik bg-gray-100 pt-2 mt-10 dark:bg-neutral-600 dark:text-white">
-            <h1 className="text-2xl font-bold mb-2 ">Lastest Realeses</h1>
+            <h1 className="text-2xl font-bold mb-2 ">{title}</h1>
             <Carousel className='w-full justify-center flex carousel'>
                 {movieChunks.map((chunk, index) => (
                     <Carousel.Item key={index}>
@@ -33,10 +33,10 @@ export function Latest({ movieChunks }) {
         </div>
     );
 }
-export function Upcoming({ movieChunks }) {
+export function Upcoming({ movieChunks , title}) {
     return (
         <div className="p-4 font-Rubik bg-gray-100 pt-2 mt-20 dark:bg-neutral-600 dark:text-white">
-            <h1 className="text-2xl font-bold mb-2">Upcoming in theathers</h1>
+            <h1 className="text-2xl font-bold mb-2">{title}</h1>
             <Carousel className='w-full justify-center flex carousel'>
                 {movieChunks.map((chunk, index) => (
                     <Carousel.Item key={index}>
@@ -62,10 +62,10 @@ export function Upcoming({ movieChunks }) {
     );
 }
 
-export function Best({ movieChunks }) {
+export function Best({ movieChunks , title}) {
     return (
-        <div className="p-4 font-Rubik bg-yellow-100 pt-2 mt-20 yellow-glow dark:text-black">
-            <h1 className="text-2xl font-bold mb-2">Top Movies</h1>
+        <div className="p-4 font-Rubik bg-yellow-100 pt-2 mt-20 yellow-glow dark:text-neutral-800">
+            <h1 className="text-2xl font-bold mb-2">{title}</h1>
             <Carousel className='w-full justify-center flex carousel'>
                 {movieChunks.map((chunk, index) => (
                     <Carousel.Item key={index}>

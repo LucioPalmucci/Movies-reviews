@@ -1,9 +1,12 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import translations from '../translations.js';
 import Comment from './Comment';
 import "./slider.css";
 
-export default function SliderComments() {
+export default function SliderComments({language}) {
+    const t = translations[language];
+
     const comments = [
         { nombre: "Ana", comentario: "The personalized recommendations are fantastic. I always discover hidden gems thanks to this site.", pfp: "https://randomuser.me/api/portraits/women/12.jpg" },
         { nombre: "Pablo", comentario: "I love the variety of reviews and recommendations they offer. I always find something new to watch.", pfp: "https://randomuser.me/api/portraits/men/1.jpg" },
@@ -24,7 +27,7 @@ export default function SliderComments() {
 
     return (
         <div className='p-4 font-Rubik mt-16'>
-            <h1>Comments</h1>
+            <h1>{t.Comments}</h1>
             <Carousel className='my-6'>
                 {comChunks.map((commentGroup, index) => {
                     return (

@@ -1,12 +1,11 @@
 import axios from 'axios';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect, useState } from 'react';
-import "./MovieSliders.css";
-import { Best, Latest, Upcoming } from './Slider';
+import React, { useEffect, useState } from 'react';
+import translations from '../translations.js';
+import { Best, Latest, Upcoming } from './Slider.js';
 
 const API_KEY = 'e64b602aba57474ef266dbb22be5f8db';
 
-export default function MovieSliders({API_URL}) {
+export default function MovieSliders({API_URL, language}) {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -44,14 +43,14 @@ export default function MovieSliders({API_URL}) {
         movieChunks.push(movies.slice(i, i + chunkSize));
     }
 
+    const t = translations[language];
+
     switch (API_URL) {
         case 'https://api.themoviedb.org/3/movie/now_playing':
-            return(<Latest movieChunks={movieChunks} />);
+            return (<Latest movieChunks={movieChunks} title={t.titleLatest} />);
         case 'https://api.themoviedb.org/3/movie/top_rated':
-            return(<Best movieChunks={movieChunks} />);
+            return (<Best movieChunks={movieChunks} title={t.titleBest} />);
         case "https://api.themoviedb.org/3/movie/upcoming":
-            return(<Upcoming movieChunks={movieChunks} />);
-        default:
-            break;
+            return (<Upcoming movieChunks={movieChunks} title={t.titleSoon} />);
     }
 }

@@ -4,13 +4,15 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import translations from '../translations.js';
 import "./MovieSliders.css";
 
 const API_KEY = 'e64b602aba57474ef266dbb22be5f8db';
 const API_URL = 'https://api.themoviedb.org/3/person/popular';
 
-export default function People() {
+export default function People({language}) {
     const [people, setPeople] = useState([]);
+    
 
     useEffect(() => {
         const fetchPeople = async () => {
@@ -23,7 +25,6 @@ export default function People() {
                     }
                 });
                 setPeople(response.data.results.slice(0, 18)); // Limit to 18 people
-                console.log('Popular People:', response.data.results.slice(0, 18));
             } catch (error) {
                 console.error('Error fetching popular people:', error);
             }
@@ -39,9 +40,11 @@ export default function People() {
         peopleChunks.push(people.slice(i, i + chunkSize));
     }
 
+    const t = translations[language];
+
     return (
         <div className='p-4 font-Rubik mt-16'>
-            <h1 className='text-2xl font-bold'>Trending celebrities</h1>
+            <h1 className='text-2xl font-bold'>{t.trendingC}</h1>
             <Carousel className='mt-8'>
                 {peopleChunks.map((chunk, index) => (
                     <Carousel.Item key={index}>
@@ -60,7 +63,7 @@ export default function People() {
                                             alt={person.name}
                                         />
                                         <h2 className='text-xl font-bold person mb-0'>{person.name}</h2>
-                                        <p className='text-gray-600 dark:text-white'>Popularity: <FontAwesomeIcon icon={faArrowTrendUp} className='text-green-400'/>{person.popularity.toFixed(0)}</p>
+                                        <p className='text-gray-600 dark:text-white'>{t.popularity}: <FontAwesomeIcon icon={faArrowTrendUp} className='text-green-400'/>{person.popularity.toFixed(0)}</p>
                                     </a>
                                 </div>
                             ))}

@@ -4,6 +4,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import translations from '../translations.js';
 import "./MovieSliders.css";
 
 const API_KEY = 'e64b602aba57474ef266dbb22be5f8db';
@@ -11,7 +12,8 @@ const API_URL1 = 'https://api.themoviedb.org/3/tv/airing_today';
 const API_URL2 = 'https://api.themoviedb.org/3/tv/top_rated';
 
 
-export default function TVshows() {
+
+export default function TVshows({language}) {
     const [airingTodayShows, setAiringTodayShows] = useState([]);
     const [topRatedShows, setTopRatedShows] = useState([]);
 
@@ -43,6 +45,8 @@ export default function TVshows() {
 
         fetchShows();
     }, []);
+
+    const t = translations[language];
 
     const getSmileIcon = (vote_average) => {
         if (vote_average > 7) {
@@ -79,10 +83,10 @@ export default function TVshows() {
 
     return (
         <div className='p-4 font-Rubik mt-20'>
-            <h1 className='text-2xl font-bold'>TV Shows</h1>
+            <h1 className='text-2xl font-bold'>{t.shows}</h1>
             <div className='flex justify-between space-x-16'>
                 <div className='text-start p-4 font-Lato rounded bg-gray-100 pt-2 mt-10 w-1/2 dark:bg-neutral-600'>
-                    <h3 className='text-xl py-2 mb-2'>Airing today</h3>
+                    <h3 className='text-xl py-2 mb-3'>{t.today}</h3>
                     {airingTodayShows.map((show) => {
                         const { icon, colorRating } = getSmileIcon(show.vote_average);
                         const { colorPopularity } = getFireColor(show.popularity);
@@ -110,7 +114,7 @@ export default function TVshows() {
                     })}
                 </div>
                 <div className='text-start p-4 font-Lato rounded bg-gray-100 pt-2 mt-10 w-1/2 dark:bg-neutral-600'>
-                    <h3 className='text-xl py-2 mb-2'>Top rated</h3>
+                    <h3 className='text-xl py-2 mb-3'>{t.topShows}</h3>
                     {topRatedShows.map((show, index) => {
                         const { icon, colorRating } = getRankingIcon(show.vote_average, index);
                         const { colorPopularity } = getFireColor(show.popularity);

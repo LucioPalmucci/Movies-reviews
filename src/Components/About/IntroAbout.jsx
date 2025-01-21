@@ -1,15 +1,13 @@
-
-export default function IntroAbout() {
+import React from 'react';
+import translations from '../translations.js';
+export default function IntroAbout({language}) {
+    const t = translations[language];
     return (
         <div className="flex p-10 m-6 justify-between bg-gray-100 font-Rubik rounded dark:bg-neutral-600">
             <img src="/claqueta.png" className="w-20 h-20" alt="claqueta"/>
             <div className="w-1/2">
-                <h1 className="mb-6">About Us</h1>
-                <p>Our mission is to help you find the perfect movie or TV show to watch.
-                    We provide reviews, ratings, and recommendations to help you make the best decision.
-                    We also have a community of movie lovers who share their opinions and insights.
-                    Whether you're looking for a new release, a classic film, or a hidden gem, we've got you covered.
-                    So sit back, relax, and let us guide you through the world of cinema.</p>
+                <h1 className="mb-6">{t.aboutUs}</h1>
+                <p>{t.desc}</p>
             </div>
         </div>
     )
