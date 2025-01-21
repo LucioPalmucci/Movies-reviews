@@ -17,7 +17,7 @@ export default function NavBar({ toggleDarkMode, isDarkMode, changeLanguage, lan
     const t = translations[language];
 
     return (
-        <nav className={`flex justify-between font-Rubik p-4 text-white ${isDarkMode ? 'bg-gray-900 ' : 'bg-orange-500 '}`}>
+        <nav className={`flex justify-between font-Rubik p-4 text-white ${isDarkMode ? 'bg-neutral-800 ' : 'bg-orange-500 '}`}>
             <ul className="flex space-x-12 items-center mb-0 list-none p-0 m-0">
                 <li><Link to="/" className="no-decoration">{t.home}</Link></li>
                 <li><Link to="/reviews" className="no-decoration">{t.reviews}</Link></li>

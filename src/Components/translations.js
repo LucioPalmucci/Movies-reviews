@@ -1,3 +1,4 @@
+
 const translations = {
     en: {
         home: "Home",
@@ -28,6 +29,26 @@ const translations = {
         questions: "If you have any questions, please contact us at",
         vPol: "View our policies",
         vLic: "View our licenses",
+        results: "Search Results for",
+        showDetails:{
+            Plot: "Plot",
+            FirstAirDate: "First Air Date",
+            Genres: "Genres",
+            Production: "Production",
+            Seasons: "Seasons",
+            Episodes: "Episodes",
+            VoteCount: "Vote Count",
+        },
+        movieDetails: {
+            Overview: "Overview",
+            ReleaseDate: "Release Date",
+            Genres: "Genres",
+            Production: "Production",
+            Runtime: "Runtime",
+            Budget: "Budget",
+            Revenue: "Revenue",
+        }
+
     },
     es: {
         home: "Inicio",
@@ -58,6 +79,25 @@ const translations = {
         questions: "Si tienes alguna pregunta, por favor contáctanos en",
         vPol: "Ver nuestras políticas",
         vLic: "Ver nuestras licencias",
+        results: "Resultados de búsqueda para",
+        showDetails:{
+            Plot: "Trama",
+            FirstAirDate: "Fecha de Estreno",
+            Genres: "Géneros",
+            Production: "Producción",
+            Seasons: "Temporadas",
+            Episodes: "Episodios",
+            VoteCount: "Votos",
+        },
+        movieDetails:{
+            Overview: "Resumen",
+            ReleaseDate: "Fecha de Estreno",
+            Genres: "Géneros",
+            Production: "Producción",
+            Runtime: "Duración",
+            Budget: "Presupuesto",
+            Revenue: "Ingresos",
+        }
     }
 };
 

@@ -3,11 +3,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import translations from '../../Components/translations.js';
 export default function TVShowDetails() {
     const { id } = useParams();
     const [show, setShow] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
+
+    useEffect(() => {
+        const appElement = document.querySelector('.App');
+        const observer = new MutationObserver(() => {
+            const newLanguage = appElement.classList.contains('es') ? 'es' : 'en';
+            setLanguage(newLanguage);
+        });
+
+        //Cuando la clase cambia, se ejecuta el observer
+        observer.observe(appElement, { attributes: true, attributeFilter: ['class'] });
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
+    const t = translations[language];
 
     useEffect(() => {
         const fetchShowDetails = async () => {
@@ -15,7 +34,7 @@ export default function TVShowDetails() {
                 const response = await axios.get(`https://api.themoviedb.org/3/tv/${id}`, {
                     params: {
                         api_key: 'e64b602aba57474ef266dbb22be5f8db',
-                        language: 'en-US'
+                        language: language === 'es' ? 'es-MX' : 'en-US',
                     }
                 });
                 setShow(response.data);
@@ -28,7 +47,7 @@ export default function TVShowDetails() {
         };
 
         fetchShowDetails();
-    }, [id]);
+    }, [id, language]);
 
     if (loading) {
         return <div>Loading...</div>;
@@ -42,6 +61,7 @@ export default function TVShowDetails() {
         return <div>No show details found.</div>;
     }
 
+    
     return (
         <div className='m-4 px-44 flex font-Rubik justify-evenly mt-10 space-x-10 items-center dark:bg-neutral-900'>
             <div>
@@ -49,12 +69,12 @@ export default function TVShowDetails() {
                 <img src={`https://image.tmdb.org/t/p/w500${show.poster_path}`} alt={show.name} />
             </div>
             <div className='p-10 rounded bg-gray-200 m-10 align-center flex flex-col h-full dark:bg-neutral-700'>
-                <p><b>Plot:</b> {show.overview}</p>
-                <p><b>First Air Date:</b> {show.first_air_date}</p>
-                <p><b>Genres:</b> {show.genres.map(genre => genre.name).join(', ')}</p>
-                <p><b>Production:</b> {show.production_companies.map(company => company.name).join(', ')}</p>
-                <p><b>Seasons:</b> {show.number_of_seasons}&nbsp;&nbsp;&nbsp; <b>Episodes:</b> {show.number_of_episodes}</p>
-                <p><b>Vote Count:</b> {show.vote_count}</p>
+                <p><b>{t.showDetails.Plot}:</b> {show.overview}</p>
+                <p><b>{t.showDetails.FirstAirDate}:</b> {show.first_air_date}</p>
+                <p><b>{t.showDetails.Genres}:</b> {show.genres.map(genre => genre.name).join(', ')}</p>
+                <p><b>{t.showDetails.Production}:</b> {show.production_companies.map(company => company.name).join(', ')}</p>
+                <p><b>{t.showDetails.Seasons}:</b> {show.number_of_seasons}&nbsp;&nbsp;&nbsp; <b>{t.showDetails.Episodes}:</b> {show.number_of_episodes}</p>
+                <p><b>{t.showDetails.VoteCount}:</b> {show.vote_count}</p>
                 <p><FontAwesomeIcon icon={faStar} className='text-yellow-400' />{show.vote_average.toFixed(1)}&nbsp;&nbsp;&nbsp;<FontAwesomeIcon icon={faCheckToSlot} color='rgb(0, 255, 0)' />{show.vote_count}</p>
             </div>
         </div>

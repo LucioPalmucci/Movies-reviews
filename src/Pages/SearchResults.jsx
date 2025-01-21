@@ -3,13 +3,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import translations from '../Components/translations.js';
 
 export default function SearchResults() {
     const location = useLocation();
     const query = new URLSearchParams(location.search).get('query');
     const [movies, setMovies] = useState([]);
-    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
+
+    useEffect(() => {
+            const appElement = document.querySelector('.App');
+            const observer = new MutationObserver(() => {
+                const newLanguage = appElement.classList.contains('es') ? 'es' : 'en';
+                setLanguage(newLanguage);
+            });
+    
+            //Cuando la clase cambia, se ejecuta el observer
+            observer.observe(appElement, { attributes: true, attributeFilter: ['class'] });
+    
+            return () => {
+                observer.disconnect();
+            };
+        }, []);
+
 
     useEffect(() => {
         const fetchMovies = async () => {
@@ -18,32 +35,28 @@ export default function SearchResults() {
                     params: {
                         api_key: 'e64b602aba57474ef266dbb22be5f8db',
                         query: query,
-                        language: 'en-US'
+                        language: language === 'es' ? 'es-MX' : 'en-US',
                     }
                 });
                 setMovies(response.data.results);
             } catch (error) {
                 console.error('Error fetching movies:', error);
                 setError('Error fetching movies');
-            } finally {
-                setLoading(false);
             }
         };
 
         fetchMovies();
-    }, [query]);
-
-    if (loading) {
-        return <div>Loading...</div>;
-    }
+    }, [query, language]);
 
     if (error) {
         return <div>{error}</div>;
     }
 
+    const t = translations[language];
+
     return (
         <div className="p-4">
-            <h1 className="text-2xl font-bold">Search Results for "{query}"</h1>
+            <h1 className="text-2xl font-bold">{t.results} "{query}"</h1>
             <br/>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {movies.map(movie => (
@@ -54,7 +67,7 @@ export default function SearchResults() {
     );
 }
 
-//Each movie card found in the search results.
+//Each movie card found in the search results
 function MovieCard({ movie }) {
     const [isExpanded, setIsExpanded] = useState(false);
     const toggleExpand = () => setIsExpanded(!isExpanded);
