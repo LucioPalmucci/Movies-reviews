@@ -47,7 +47,9 @@ const translations = {
             Runtime: "Runtime",
             Budget: "Budget",
             Revenue: "Revenue",
-        }
+        },
+        random: "Random Reviews",
+        notRated: "No rating available",
 
     },
     es: {
@@ -97,7 +99,9 @@ const translations = {
             Runtime: "Duración",
             Budget: "Presupuesto",
             Revenue: "Ingresos",
-        }
+        },
+        random: "Reseñas Aleatorias",
+        notRated: "Sin calificación disponible",
     }
 };
 
