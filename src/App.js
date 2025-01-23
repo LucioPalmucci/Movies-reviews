@@ -38,7 +38,7 @@ function App() {
     return (
         <div className={`App ${isDarkMode ? 'dark' : ''} ${language === 'es' ? 'es' : 'en'}`}>
             <NavBar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} changeLanguage={changeLanguage} language={language} />
-            <main className="content p-4 dark:bg-gray-900 dark:text-white">
+            <main className="content p-4 dark:bg-neutral-900 dark:text-white">
                 <Outlet />
             </main>
             <Footer />

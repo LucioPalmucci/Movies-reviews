@@ -9,7 +9,7 @@ import MovieDetails from './Pages/Details/MovieDetails';
 import TVShowDetails from './Pages/Details/TVshowDetails';
 import Home from './Pages/Home';
 import Reviews from './Pages/Reviews';
-import SearchMovieReviews from './Pages/SearchMovieReviews';
+import SearchForAMovieReviews from './Pages/SearchForAMovieReviews';
 import SearchResults from './Pages/SearchResults';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -25,7 +25,7 @@ root.render(
           <Route path="movie/:id" element={<MovieDetails />} />
           <Route path="tvshow/:id" element={<TVShowDetails />} />
           <Route path='search' element={<SearchResults />} />
-          <Route path="MovieRev" element={<SearchMovieReviews/>} />
+          <Route path="MovieRev" element={<SearchForAMovieReviews/>} />
         </Route>
       </Routes>
     </Router>

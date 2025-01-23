@@ -7,7 +7,7 @@ import translations from '../Components/translations';
 
 const API_KEY = 'e64b602aba57474ef266dbb22be5f8db';
 
-function SearchMovieReviews() {
+function SearchForAMovieReviews() {
     const location = useLocation();
     const query = new URLSearchParams(location.search).get('query');
     const [reviews, setReviews] = useState([]);
@@ -98,7 +98,6 @@ function SearchMovieReviews() {
                         <hr />
                         <ReviewCard key={review.id} review={review} language={language} />
                     </div>
-
                 ))}
             </div>
         </div>
@@ -152,4 +151,4 @@ function ReviewCard({ review, language }) {
     );
 }
 
-export default SearchMovieReviews;
+export default SearchForAMovieReviews;

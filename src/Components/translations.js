@@ -50,7 +50,7 @@ const translations = {
         },
         random: "Random Reviews",
         notRated: "No rating available",
-
+        noReviews: "No reviews available",
     },
     es: {
         home: "Inicio",
@@ -102,6 +102,7 @@ const translations = {
         },
         random: "Reseñas Aleatorias",
         notRated: "Sin calificación disponible",
+        noReviews: "No hay reseñas disponibles",
     }
 };
 
