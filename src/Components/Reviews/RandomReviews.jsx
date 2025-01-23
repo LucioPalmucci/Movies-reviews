@@ -109,7 +109,7 @@ export default function RandomReviews() {
 
     const handleSearchSubmit = (e) => {
         e.preventDefault();
-        navigate(`/search?query=${searchQuery}`);
+        navigate(`/MovieRev?query=${searchQuery}`);
     }
 
     return (
