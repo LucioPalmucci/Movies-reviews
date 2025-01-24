@@ -23,7 +23,7 @@ export default function About() {
 
     return (
         <div>
-            <IntroAbout language={language} />
+            <IntroAbout language={language}/>
             <SliderComments language={language}/>
             <Contact language={language}/>
         </div>

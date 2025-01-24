@@ -6,6 +6,8 @@ const translations = {
         about: "About movie-reviews",
         contact: "Contact",
         language: "Language",
+        movies: "Movies",
+        shows : "TV Shows",
         search_placeholder: "Search...",
         titleLatest: "Latest Movies",
         titleBest: "Top Rated Movies",
@@ -51,6 +53,7 @@ const translations = {
         random: "Random Reviews",
         notRated: "No rating available",
         noReviews: "No reviews available",
+        searchRevMovie: "Search reviews for a movie",
     },
     es: {
         home: "Inicio",
@@ -58,6 +61,8 @@ const translations = {
         about: "Sobre movie-reviews",
         contact: "Contacto",
         language: "Idioma",
+        movies: "Películas",
+        shows: "Series de TV",
         search_placeholder: "Buscar...",
         titleLatest: "Últimas Películas",
         titleBest: "Películas Mejor Valoradas",
@@ -103,6 +108,7 @@ const translations = {
         random: "Reseñas Aleatorias",
         notRated: "Sin calificación disponible",
         noReviews: "No hay reseñas disponibles",
+        searchRevMovie: "Buscar reseñas de una película",
     }
 };
 
