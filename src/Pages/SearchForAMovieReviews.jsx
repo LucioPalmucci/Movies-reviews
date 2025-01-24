@@ -128,7 +128,7 @@ function ReviewCard({ review, language }) {
             <div className='flex items-center mb-4'>
                 <div className=" items-center mb-4">
                     <div className="flex mb-4">
-                        {(review.author_details.avatar_path) ? <img src={`https://www.themoviedb.org/t/p/w500${review.author_details.avatar_path}`} className="w-16 h-16 rounded-full mr-4" /> : null}
+                        {(review.author_details.avatar_path) ? <img src={`https://www.themoviedb.org/t/p/w500${review.author_details.avatar_path}`} className="w-16 h-16 rounded-full mr-4" alt=""/> : null}
                         <div>
                             <h2 className="text-lg font-bold">{review.author}</h2>
                             <p className="text-sm">{new Date(review.created_at).toLocaleDateString()}</p>

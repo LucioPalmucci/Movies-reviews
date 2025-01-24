@@ -77,7 +77,7 @@ export default function SearchResults() {
                         <h3>{t.movies}:</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                             {movies.map(movie => (
-                                <MediaCard key={movie.id} media={movie} type={movie} />
+                                <MediaCard key={movie.id} media={movie} type="movie" />
                             ))}
                         </div>
                     </div>
@@ -87,7 +87,7 @@ export default function SearchResults() {
                         <h3>{t.shows}:</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                             {tvShows.map(show => (
-                                <MediaCard key={show.id} media={show} type={show} />
+                                <MediaCard key={show.id} media={show} type="show" />
                             ))}
                         </div>
                     </div>

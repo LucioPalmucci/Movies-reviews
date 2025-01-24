@@ -35,7 +35,7 @@ export default function MovieSliders({API_URL, language}) {
         };
 
         fetchMovies();
-    }, []);
+    }, [API_URL, language]);
 
     const chunkSize = 8;
     const movieChunks = [];
@@ -52,5 +52,7 @@ export default function MovieSliders({API_URL, language}) {
             return (<Best movieChunks={movieChunks} title={t.titleBest} />);
         case "https://api.themoviedb.org/3/movie/upcoming":
             return (<Upcoming movieChunks={movieChunks} title={t.titleSoon} />);
+        default:
+            return null;
     }
 }
