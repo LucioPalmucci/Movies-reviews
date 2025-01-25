@@ -4,11 +4,11 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import translations from '../translations.js';
 import "./MovieSliders.css";
 
 const API_KEY = 'e64b602aba57474ef266dbb22be5f8db';
-const API_URL = 'https://api.themoviedb.org/3/person/popular';
 
 export default function People({language}) {
     const [people, setPeople] = useState([]);
@@ -17,7 +17,7 @@ export default function People({language}) {
     useEffect(() => {
         const fetchPeople = async () => {
             try {
-                const response = await axios.get(API_URL, {
+                const response = await axios.get('https://api.themoviedb.org/3/person/popular', {
                     params: {
                         api_key: API_KEY,
                         language: 'en-US',
@@ -51,8 +51,8 @@ export default function People({language}) {
                         <div className='flex justify-around'>
                             {chunk.map((person) => (
                                 <div key={person.id} className='p-4 w-auto h-200'>
-                                    <a
-                                        href={`https://www.themoviedb.org/person/${person.id}`}
+                                    <Link
+                                        to={`/person/${person.id}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className='no-decoration'
@@ -64,7 +64,7 @@ export default function People({language}) {
                                         />
                                         <h2 className='text-xl font-bold person mb-0'>{person.name}</h2>
                                         <p className='text-gray-600 dark:text-white'>{t.popularity}: <FontAwesomeIcon icon={faArrowTrendUp} className='text-green-400'/>{person.popularity.toFixed(0)}</p>
-                                    </a>
+                                    </Link>
                                 </div>
                             ))}
                         </div>

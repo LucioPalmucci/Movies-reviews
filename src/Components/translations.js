@@ -53,6 +53,13 @@ const translations = {
         notRated: "No rating available",
         noReviews: "No reviews available",
         searchRevMovie: "Search reviews for a movie",
+        personDetails: {
+            Biography: "Biography",
+            Birthday: "Birthday",
+            Deathday: "Deathday",
+            KnownFor: "Known For",
+            FamousMovies: "Famous Movies",
+        }
     },
     es: {
         home: "Inicio",
@@ -107,6 +114,13 @@ const translations = {
         notRated: "Sin calificación disponible",
         noReviews: "No hay reseñas disponibles",
         searchRevMovie: "Buscar reseñas de una película",
+        personDetails: {
+            Biography: "Biografía",
+            Birthday: "Cumpleaños",
+            Deathday: "Día de Muerte",
+            KnownFor: "Conocido/a por",
+            FamousMovies: "Películas Famosas",
+        }
     }
 };
 

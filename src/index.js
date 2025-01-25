@@ -6,6 +6,7 @@ import './index.css';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import MovieDetails from './Pages/Details/MovieDetails';
+import PersonDetails from './Pages/Details/PersonDetails';
 import TVShowDetails from './Pages/Details/TVshowDetails';
 import Home from './Pages/Home';
 import Reviews from './Pages/Reviews';
@@ -24,6 +25,7 @@ root.render(
           <Route path="contact" element={<Contact />} />
           <Route path="movie/:id" element={<MovieDetails />} />
           <Route path="tvshow/:id" element={<TVShowDetails />} />
+          <Route path='person/:id' element={<PersonDetails />} />
           <Route path='search' element={<SearchResults />} />
           <Route path="MovieRev" element={<SearchForAMovieReviews/>} />
         </Route>
