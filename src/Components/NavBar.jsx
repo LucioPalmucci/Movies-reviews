@@ -22,7 +22,6 @@ export default function NavBar({ toggleDarkMode, isDarkMode, changeLanguage, lan
                 <li><Link to="/" className="no-decoration">{t.home}</Link></li>
                 <li><Link to="/reviews" className="no-decoration">{t.reviews}</Link></li>
                 <li><Link to="/about" className="no-decoration">{t.about}</Link></li>
-                <li><Link to="/contact" className="no-decoration">{t.contact}</Link></li>
             </ul>
             <form className="flex items-center" onSubmit={handleSearchSubmit}>
                 <input

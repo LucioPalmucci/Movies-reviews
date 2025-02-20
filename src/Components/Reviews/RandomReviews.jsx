@@ -162,7 +162,7 @@ function ReviewCard({ review, language }) {
     const [isExpanded, setIsExpanded] = useState(false);
     const toggleExpand = () => setIsExpanded(!isExpanded);
 
-    const overviewText = isExpanded ? review.content : `${review.content.substring(0, 400)}...`;
+    const overviewText = isExpanded ? review.content : `${review.content.substring(0, 200)}...`;
 
     return (
         <div className="dark:text-white p-4 rounded w-full font-Rubik">

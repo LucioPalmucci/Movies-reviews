@@ -1,4 +1,5 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import "./Home/MovieSliders.css";
@@ -9,7 +10,7 @@ export default function Footer() {
             <p className='mb-0'>2024 MovieReviews</p>
             <p className='mb-0'>
                 <a href="https://luciopalmucci.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" className='hover:text-gray-400 transition duration-300 no-decoration'>
-                    Lucio Palmucci
+                    Lucio Palmucci <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                 </a>
                 <a href="https://www.linkedin.com/in/luciopalmucci/" target="_blank" rel="noopener noreferrer" className="ml-2 no-decoration">
                     <FontAwesomeIcon icon={faLinkedin} className='hover:opacity-75 transition duration-300' />

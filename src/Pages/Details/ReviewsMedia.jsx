@@ -74,7 +74,7 @@ function ReviewCard({ review }) {
                 </div>
             </div>
             <p className="text-sm mb-0">{reviewText}</p>
-            {review.content.length > 300 && (
+            {review.content.length > 100 && (
                 <button onClick={toggleExpand} className="text-blue-500 text-sm absolute bottom-4 right-4">
                     {isExpanded ? 'Read Less' : 'Read More'}
                 </button>
