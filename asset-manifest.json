@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Movies-reviews/static/css/main.81a5fef4.css",
-    "main.js": "/Movies-reviews/static/js/main.e8efc587.js",
+    "main.js": "/Movies-reviews/static/js/main.fb4db2cf.js",
     "static/media/claqueta.png": "/Movies-reviews/static/media/claqueta.f482d7ab80ab357d5070.png",
     "index.html": "/Movies-reviews/index.html",
     "main.81a5fef4.css.map": "/Movies-reviews/static/css/main.81a5fef4.css.map",
-    "main.e8efc587.js.map": "/Movies-reviews/static/js/main.e8efc587.js.map"
+    "main.fb4db2cf.js.map": "/Movies-reviews/static/js/main.fb4db2cf.js.map"
   },
   "entrypoints": [
     "static/css/main.81a5fef4.css",
-    "static/js/main.e8efc587.js"
+    "static/js/main.fb4db2cf.js"
   ]
 }
